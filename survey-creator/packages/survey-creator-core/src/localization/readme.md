@@ -11,7 +11,7 @@ Follow the steps below to add a new localization dictionary:
 1. Copy the content from the [`english.ts`](../localization/english.ts) file and uncomment the first and last lines.
 1. Translate required strings.
 1. Open the [`src/entries/i18n.ts`](../entries/i18n.ts) file and import your file in it for Webpack. For example, the following code imports the `french.ts` file:
-  
+
     ```js
     import "../localization/french";
     ```

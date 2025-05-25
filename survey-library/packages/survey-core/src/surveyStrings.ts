@@ -1,8 +1,9 @@
-import { englishStrings } from "./localization/english";
+// import { englishStrings } from "./localization/english";
+import { vietnameseSurveyStrings } from "./localization/vietnamese";
 
 export var surveyLocalization = {
   currentLocaleValue: "",
-  defaultLocaleValue: "en",
+  defaultLocaleValue: "vi",
   locales: <{ [index: string]: any }>{},
   localeNames: <{ [index: string]: any }>{},
   localeNamesInEnglish: <{ [index: string]: any }>{},
@@ -55,8 +56,8 @@ export var surveyLocalization = {
     addLocale(locale);
     addLocale(this.currentLocale);
     addLocale(this.defaultLocale);
-    if (this.defaultLocale !== "en") {
-      addLocaleCore("en");
+    if (this.defaultLocale !== "vi") {
+      addLocaleCore("vi");
     }
     for (let i = 0; i < locs.length; i++) {
       const res = locs[i][strName];
@@ -108,6 +109,10 @@ export function getLocaleStrings(locale: string): any {
 export function setupLocale(localeConfig: { localeCode: string, strings: any, nativeName: string, englishName: string, rtl?: boolean }): void {
   surveyLocalization.setupLocale(localeConfig);
 }
-export var surveyStrings = englishStrings;
-(<any>surveyLocalization).locales["en"] = englishStrings;
-(<any>surveyLocalization).localeNames["en"] = "english";
+// export var surveyStrings = englishStrings;
+// (<any>surveyLocalization).locales["vi"] = englishStrings;
+// (<any>surveyLocalization).localeNames["vi"] = "english";
+
+export var surveyStrings = vietnameseSurveyStrings;
+(<any>surveyLocalization).locales["vi"] = vietnameseSurveyStrings;
+(<any>surveyLocalization).localeNames["vi"] = "vietnamese";

@@ -32,4 +32,5 @@ import "../localization/tajik";
 import "../localization/thai";
 import "../localization/traditional-chinese";
 import "../localization/turkish";
+import "../localization/vietnamese";
 import "../localization/haitian-creole";
